@@ -73,7 +73,7 @@ body {
 }
 
 img {
-    width: 200px
+    width: 350px
 }
 
 /* ── Skip link ── */
@@ -575,8 +575,8 @@ img {
 .itinerary-item:last-child { border-bottom: none; }
 .itinerary-time {
   font-family: var(--ff-hand);
-  font-size: 1.1rem;
-  color: var(--clr-gold);
+  font-size: 1.15rem;
+  color: var(--clr-green);
   padding-top: 0.15rem;
 }
 .itinerary-title {
