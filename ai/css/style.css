@@ -92,7 +92,7 @@ img {
 
 /* ── Navbar ── */
 .navbar {
-  background-color: var(--clr-dark) !important;
+  background-color: var(--clr-dark);
   border-bottom: 3px solid var(--clr-gold);
   padding: 0.6rem 1.5rem;
   position: sticky;
@@ -102,24 +102,24 @@ img {
 .navbar-brand {
   font-family: var(--ff-hand);
   font-size: var(--fs-xl);
-  color: var(--clr-gold) !important;
+  color: var(--clr-gold);
   letter-spacing: 0.02em;
 }
 .nav-link,
 .dropdown-toggle {
   font-family: var(--ff-body);
   font-size: var(--fs-xs);
-  color: var(--clr-tan) !important;
+  color: var(--clr-tan);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 0.5rem 0.9rem !important;
+  padding: 0.5rem 0.9rem;
   transition: color var(--transition);
 }
 .nav-link:hover,
 .nav-link:focus,
 .dropdown-toggle:hover,
 .dropdown-toggle:focus {
-  color: var(--clr-gold) !important;
+  color: var(--clr-gold);
 }
 .dropdown-menu {
   background-color: var(--clr-dark);
@@ -141,7 +141,7 @@ img {
   color: var(--clr-gold);
 }
 .navbar-toggler {
-  border-color: var(--clr-tan) !important;
+  border-color: var(--clr-tan);
 }
 .navbar-toggler-icon { filter: invert(1); }
 
@@ -220,9 +220,9 @@ img {
 /* ── Reduced motion ── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
   }
   html { scroll-behavior: auto; }
 }
