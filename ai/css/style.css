@@ -203,6 +203,8 @@ img {
   animation: fadeUp 0.7s ease 0.85s forwards;
 }
 
+
+
 /* ── Animations ── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(18px); }
@@ -217,16 +219,6 @@ img {
   to   { opacity: 1; transform: translateX(0); }
 }
 
-/* ── Reduced motion ── */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms;
-    animation-iteration-count: 1;
-    transition-duration: 0.01ms;
-  }
-  html { scroll-behavior: auto; }
-}
-
 /* ── Layout ── */
 .container {
   max-width: 1080px;
@@ -234,6 +226,8 @@ img {
   padding: 0 var(--sp-sm);
 }
 .mt-section { margin-top: var(--sp-xl); }
+
+
 
 /* ── Paper sections ── */
 .paper {
@@ -255,6 +249,7 @@ img {
   color: var(--clr-dark);
   margin-bottom: var(--sp-md);
 }
+
 .section-title span {
   display: block;
   width: 56px;
@@ -275,7 +270,12 @@ img {
   margin-bottom: var(--sp-sm);
   color: var(--clr-dark);
 }
+
+
 .bio-text p:last-child { margin-bottom: 0; }
+
+
+
 
 .bio-quote {
   font-family: var(--ff-hand);
@@ -287,6 +287,9 @@ img {
   line-height: 1.5;
 }
 
+
+
+
 /* ── Polaroid photos ── */
 .polaroid {
   background: var(--clr-white);
@@ -294,8 +297,21 @@ img {
   border: 1px solid var(--clr-tan);
   box-shadow: var(--shadow-paper);
   border-radius: var(--radius-sm);
-  transition: transform var(--transition), box-shadow var(--transition);
+  /* transition: transform var(--transition), box-shadow var(--transition); */
+    /* transition: transform var(--transition); */
+    
+
 }
+
+
+@media (prefers-reduced-motion: reduce) {
+  .polaroid{
+    border: 10px solid green;
+  }
+}
+
+
+
 .polaroid:hover {
   transform: translateY(-5px) rotate(0deg);
   box-shadow: 8px 8px 0 var(--clr-tan);
@@ -320,6 +336,9 @@ img {
 .polaroid--r { transform: rotate(1.8deg); }
 .polaroid--s { transform: rotate(-0.8deg); }
 
+
+
+
 /* ── Photo grids ── */
 .photo-grid-3 {
   display: grid;
@@ -328,6 +347,27 @@ img {
   padding: var(--sp-xs) 0;
 }
 
+
+/* ── Reduced motion ── */
+/* @media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.0ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
+  }
+  html { scroll-behavior: auto; } 
+  
+ .polaroid:hover {
+  transform: none;
+  box-shadow: none;
+  transition: none;
+}
+
+.polaroid--l { transform: rotate(0);
+  border: 15px solid var(--clr-green); }
+.polaroid--r { transform: rotate(0); }
+.polaroid--s { transform: rotate(0); }
+} */
 /* ── Stats strip ── */
 .stats-strip {
   display: grid;
@@ -676,3 +716,4 @@ footer p {
   .photo-grid-3 { grid-template-columns: repeat(3, 1fr); }
   .days-grid { grid-template-columns: repeat(3, 1fr); }
 }
+
